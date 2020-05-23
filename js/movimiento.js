@@ -3,10 +3,11 @@ AFRAME.registerComponent('despegue',{
   init: function(){
     //var objeto = this.el.setObject3D('cubo',new THREE.PointLight());
     
-    //var geometry = new THREE.CubeGeometry(2,2,2);
-    //var material = new THREE.MeshBasicMaterial({color:0xff1199, wirefrAME:true});
-    //this.el.setObject3D('cubo',new THREE.Mesh(geometry,material));
-    //var objeto = this.el.getObject3D('cubo');
+    var geometry = new THREE.CubeGeometry(2,2,2);
+    var material = new THREE.MeshBasicMaterial({color:0xff1199, wirefrAME:true});
+    this.el.setObject3D('cubo',new THREE.Mesh(geometry,material));
+    var objeto = this.el.getObject3D('cubo');
+    objeto.position.x = -5
 
     //console.log(objeto);
   },
@@ -20,21 +21,21 @@ AFRAME.registerComponent('despegue',{
     //Tiempo de cuenta atrás, en segundos
     var tiempo = time/1000;
 
-    //var objeto = this.el.getObject3D('cubo');
+    var objeto = this.el.getObject3D('cubo');
     
-    //objeto.position.y += deltatime/1000 ;
+    objeto.position.y += deltatime/1000 ;
     //console.log(tiempo);
 
-    if(tiempo >= 3){
-      entity.object3D.position.y += 0.02;
-      //objeto.position.x -= deltatime/1000 ;
+    if(tiempo >= 10){
+      entity.object3D.position.y += 0.003;
+      objeto.position.x -= deltatime/1000 ;
     }
   }
 
 });
 
 
-/*AFRAME.registerComponent('atmosfera',{
+AFRAME.registerComponent('atmosfera',{
 
   init: function(){
 
@@ -50,7 +51,7 @@ AFRAME.registerComponent('despegue',{
     cielo.setAttribute('opacity',opacidad);
     //console.log(entity.object3D.position.y);
   }
-});*/
+});
 
 /*AFRAME.registerComponent('parabola', { 
   

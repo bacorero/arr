@@ -13,9 +13,11 @@
     
     <body style='margin : 0px; overflow: hidden;'>
       <a-scene>
-        <a-entity light="type:directional; castShadow:true;" position="1 2 1"></a-entity>
-        <a-sky color="cyan"></a-sky>
-        <a-plane position="1 0 -5" rotation="-90 0 0" width="4" height="4" color="#999911S" shadow="receive: true"></a-plane>
+        <!--<a-entity light="type: hemisphere; color: #EEE; groundColor: #3C3; intensity: 2; castShadow:true" position="1 2 1"></a-entity>-->
+        <a-entity light="type:directional; castShadow:true" position="-1 4 7" intensity="3"></a-entity>
+        <a-sky color="cyan" pad></a-sky>
+        <a-plane color="#119933" position="1 0 -5" material-fog="false" rotation="-90 0 0" width="100" height="100" shadow="receive: true"></a-plane>
+        <!--<a-sphere src="./assets/grass.jpg" position="1 0 -5" rotation="-90 0 0" radius="2"  shadow="receive: true"></a-sphere>-->
         <a-entity gltf-model="url(./assets/cohete.gltf)" scale="0.3 0.3 0.3" position="0 0 -5" shadow="receive: false" despegue></a-entity>
         <a-camera></a-camera>
       </a-scene>
