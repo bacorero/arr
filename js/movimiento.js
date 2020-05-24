@@ -11,15 +11,18 @@ AFRAME.registerComponent('pad',{
     var hasGP = false;
     var despegue = false;
 
-    //Se ha conectado el gamepad
-    $(window).on("gamepadconnected", function(e) {
-      hasGP = true;
-      startReportOnGamepad();
-    });
-    //Se ha desconectado el gamepad
-    $(window).on("gamepaddisconnected", function(e) {
-      hasGP = false;
-  });
+    if(canGame){
+       //Se ha conectado el gamepad
+        $(window).on("gamepadconnected", function(e) {
+          hasGP = true;
+          startReportOnGamepad();
+        });
+      //Se ha desconectado el gamepad
+        $(window).on("gamepaddisconnected", function(e) {
+          hasGP = false;
+        });
+    }
+   
     
   },
 
@@ -27,35 +30,35 @@ AFRAME.registerComponent('pad',{
   
   tick: function(time,deltatime){
 
-    //var despegue = false;
-
-    //Comprobamos si hay acción del gamepad
+    //Adquiere el primer gamepad que encuentres
     var gp = navigator.getGamepads()[0];
-
-    //Pulsado botón A?
-    if(gp.buttons[3].pressed){
-      despegue = true;
-    }
-
-    //Axis left/rigth
-    if(despegue){
-      entity.object3D.position.x += gp.axes[1] * (deltatime/1000);
-      entity.object3D.position.z += gp.axes[0] * (deltatime/1000);
-    }
 
     //Recuperamos la entidad que ha llamado al evento
     var entity = this.el;
+
+    //Comprobamos si hay acción del gamepad
+    if(hasGP){
+      //Pulsado botón A?
+      if(gp.buttons[3].pressed){
+          despegue = true;
+      }
+
+      //Axis left/rigth
+      if(despegue){
+          entity.object3D.position.x += gp.axes[1] * (deltatime/1000);
+          entity.object3D.position.z += gp.axes[0] * (deltatime/1000);
+      }
+    }
+    
     //Velocidad de desplazamiento
-    var speed = 3;
+    //var speed = 3;
     //Tiempo de cuenta atrás, en segundos
-    var tiempo = time/1000;
+    //var tiempo = time/1000;
 
     //var objeto = this.el.getObject3D('cubo');
     //objeto.position.y += deltatime/1000 ;
     //objeto.position.x -= deltatime/1000 ;
     //console.log(tiempo);
-
-   
   }
 
 });
