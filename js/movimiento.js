@@ -31,6 +31,7 @@ AFRAME.registerComponent('pad',{
 
     //Pulsado botón A?
     if(gp.buttons[3].pressed){
+      despegue = true;
     }
 
     //Axis left/rigth
