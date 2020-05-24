@@ -1,5 +1,7 @@
 AFRAME.registerComponent('pad',{
 
+  //schema:{despegue:'boolean'},
+
   canGame: function(){
     return "getGamepads" in navigator;
   },
@@ -7,6 +9,7 @@ AFRAME.registerComponent('pad',{
   init: function(){
     var repGP;
     var hasGP = false;
+    var despegue = false;
 
     //Se ha conectado el gamepad
     $(window).on("gamepadconnected", function(e) {
@@ -24,7 +27,7 @@ AFRAME.registerComponent('pad',{
   
   tick: function(time,deltatime){
 
-    var despegue = false;
+    //var despegue = false;
 
     //Comprobamos si hay acción del gamepad
     var gp = navigator.getGamepads()[0];
