@@ -1,18 +1,43 @@
-AFRAME.registerComponent('despegue',{
+AFRAME.registerComponent('pad',{
 
-  init: function(){
-    //var objeto = this.el.setObject3D('cubo',new THREE.PointLight());
-    
-    var geometry = new THREE.CubeGeometry(2,2,2);
-    var material = new THREE.MeshBasicMaterial({color:0xff1199, wirefrAME:true});
-    this.el.setObject3D('cubo',new THREE.Mesh(geometry,material));
-    var objeto = this.el.getObject3D('cubo');
-    objeto.position.x = -5
-
-    //console.log(objeto);
+  canGame: function(){
+    return "getGamepads" in navigator;
   },
 
+  init: function(){
+    var repGP;
+    var hasGP = false;
+
+    //Se ha conectado el gamepad
+    $(window).on("gamepadconnected", function(e) {
+      hasGP = true;
+      startReportOnGamepad();
+    });
+    //Se ha desconectado el gamepad
+    $(window).on("gamepaddisconnected", function(e) {
+      hasGP = false;
+  });
+    
+  },
+
+  
+  
   tick: function(time,deltatime){
+
+    var despegue = false;
+
+    //Comprobamos si hay acción del gamepad
+    var gp = navigator.getGamepads()[0];
+
+    //Pulsado botón A?
+    if(gp.buttons[3].pressed){
+    }
+
+    //Axis left/rigth
+    if(despegue){
+      entity.object3D.position.x += gp.axes[1] * (deltatime/1000);
+      entity.object3D.position.z += gp.axes[0] * (deltatime/1000);
+    }
 
     //Recuperamos la entidad que ha llamado al evento
     var entity = this.el;
@@ -21,21 +46,25 @@ AFRAME.registerComponent('despegue',{
     //Tiempo de cuenta atrás, en segundos
     var tiempo = time/1000;
 
-    var objeto = this.el.getObject3D('cubo');
-    
-    objeto.position.y += deltatime/1000 ;
+    //var objeto = this.el.getObject3D('cubo');
+    //objeto.position.y += deltatime/1000 ;
+    //objeto.position.x -= deltatime/1000 ;
     //console.log(tiempo);
 
-    if(tiempo >= 10){
-      entity.object3D.position.y += 0.003;
-      objeto.position.x -= deltatime/1000 ;
-    }
+   
   }
 
 });
+//Axes left/rigth -->   axes[1] --> left = 1 rigth = -1
+    //Axes up/down    -->   axes[0] --> up = -1  down = 1
+    //A -->   button[3]
+    //B -->   button[0]  
+    //C -->   button[2]
+    //D -->   button[1]
+    //S1-->   button[4]
+    //S2-->   button[5]  
 
-
-AFRAME.registerComponent('atmosfera',{
+/*AFRAME.registerComponent('atmosfera',{
 
   init: function(){
 
@@ -51,7 +80,7 @@ AFRAME.registerComponent('atmosfera',{
     cielo.setAttribute('opacity',opacidad);
     //console.log(entity.object3D.position.y);
   }
-});
+});*/
 
 /*AFRAME.registerComponent('parabola', { 
   

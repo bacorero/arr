@@ -24,20 +24,20 @@ AFRAME.registerComponent('pad',{
         var gp = navigator.getGamepads()[0];
         var hasGP;
         if(data.hasGP){
-            if(gp.buttons[13].pressed){
-                entity.object3D.position.x += 0.3;
+            if(gp.buttons[1].pressed){
+                entity.object3D.position.x += 0.5;
                 console.log("Derecha");
             } 
-            else if(gp.buttons[15].pressed){
-                entity.object3D.position.x -= 0.3;
+            else if(gp.buttons[2].pressed){
+                entity.object3D.position.x -= 0.5;
                 console.log("Izquierda");
             } 
-            else if(gp.buttons[12].pressed){
-                entity.object3D.position.y += 0.03;
+            else if(gp.buttons[3].pressed){
+                entity.object3D.position.y += 0.5;
                 console.log("Arriba");
             } 
-            else if(gp.buttons[14].pressed){
-                entity.object3D.position.y -= 0.03;
+            else if(gp.buttons[4].pressed){
+                entity.object3D.position.y -= 0.5;
                 console.log("Abajo");
             } 
         }
