@@ -10,12 +10,15 @@ AFRAME.registerComponent('pad',{
     var repGP;
     var hasGP = false;
     var despegue = false;
+    //Adquiere el primer gamepad que encuentres
+    var gp;
 
     if(canGame){
        //Se ha conectado el gamepad
         $(window).on("gamepadconnected", function(e) {
           hasGP = true;
-          startReportOnGamepad();
+          gp = navigator.getGamepads()[0];
+          //startReportOnGamepad();
         });
       //Se ha desconectado el gamepad
         $(window).on("gamepaddisconnected", function(e) {
@@ -29,9 +32,6 @@ AFRAME.registerComponent('pad',{
   
   
   tick: function(time,deltatime){
-
-    //Adquiere el primer gamepad que encuentres
-    var gp = navigator.getGamepads()[0];
 
     //Recuperamos la entidad que ha llamado al evento
     var entity = this.el;
