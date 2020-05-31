@@ -2,28 +2,24 @@
     <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Prueba de GamePad</title>
-
+      <title>Fisicas4</title>
       <script src="./js/aframe.min.js"></script>
-      <!--<script src="./js/aframe-extras.min.js"></script>-->
-      <!--<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>-->
+      <script src="./js/aframe-ar.js"></script>
+      <script src="./js/aframe-ar-nft.js"></script>
       <!--<script src="./js/aframe-physics-system.min.js"></script>-->
-      <!--<script src="./js/movimiento.js"></script>-->
-      <!--<script src="./js/camara.js"></script> -->
-      <script src="./js/jquery-3.5.1.min.js"></script>
-      <script src="./js/gamepad.js"></script>
-
+      <script src="./js/movimiento.js"></script>
     </head>
     
+    
     <body style='margin : 0px; overflow: hidden;'>
-      <div style="text-align: center;">
-        <div style="width:100%;max-width:400px;text-align:left;margin: auto;">
-            <div id="gamepadPrompt"></div>
-            <div id="gamepadDisplay"></div>
-        </div>
-    </div>
-      <!--<a-scene>
-        <a-camera><a-box id="cubo" position="0 2 -5" color="green" rotation="0 30 45" scale="1 1 1" pad></a-box></a-camera>
-      </a-scene> -->  
+      <a-scene>
+        <!--<a-entity light="type: hemisphere; color: #EEE; groundColor: #3C3; intensity: 2; castShadow:true" position="1 2 1"></a-entity>-->
+        <a-entity light="type:directional; castShadow:true" position="-1 4 7" intensity="3"></a-entity>
+        <a-sky color="cyan" pad></a-sky>
+        <a-plane color="#119933" position="1 0 -5" material-fog="false" rotation="-90 0 0" width="100" height="100" shadow="receive: true"></a-plane>
+        <!--<a-sphere src="./assets/grass.jpg" position="1 0 -5" rotation="-90 0 0" radius="2"  shadow="receive: true"></a-sphere>-->
+        <a-entity gltf-model="url(./assets/cohete.gltf)" scale="0.3 0.3 0.3" position="0 0 -5" shadow="receive: false"  pad></a-entity>
+        <a-camera></a-camera>
+      </a-scene>
     </body>
   </html>
