@@ -39,6 +39,7 @@ AFRAME.registerComponent('pad',{
       var gp = navigator.getGamepads()[0];
       //Pulsado botón A?
       if(gp.buttons[3].pressed){
+        var prompt = "Pulsado el botón A";
           despegue = true;
       }
 
