@@ -14,6 +14,7 @@ AFRAME.registerComponent('pad',{
     if(canGame){
        //Se ha conectado el gamepad
         $(window).on("gamepadconnected", function(e) {
+          $("#gamepadPrompt").html("Game Pad Conectado!");
           hasGP = true;
           //startReportOnGamepad();
         });
@@ -40,6 +41,7 @@ AFRAME.registerComponent('pad',{
       //Pulsado botón A?
       if(gp.buttons[3].pressed){
         var prompt = "Pulsado el botón A";
+        $("#gamepadPrompt").html("Pulsada la tecla A");
           despegue = true;
       }
 
