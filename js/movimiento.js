@@ -10,14 +10,11 @@ AFRAME.registerComponent('pad',{
     var repGP;
     var hasGP = false;
     var despegue = false;
-    //Adquiere el primer gamepad que encuentres
-    var gp;
-
+    
     if(canGame){
        //Se ha conectado el gamepad
         $(window).on("gamepadconnected", function(e) {
           hasGP = true;
-          gp = navigator.getGamepads()[0];
           //startReportOnGamepad();
         });
       //Se ha desconectado el gamepad
@@ -38,6 +35,8 @@ AFRAME.registerComponent('pad',{
 
     //Comprobamos si hay acción del gamepad
     if(hasGP){
+      //Adquiere el primer gamepad que encuentres
+      var gp = navigator.getGamepads()[0];
       //Pulsado botón A?
       if(gp.buttons[3].pressed){
           despegue = true;
