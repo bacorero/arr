@@ -1,17 +1,19 @@
+function canGame(){
+    return "getGamepads" in navigator;
+}
+
 AFRAME.registerComponent('pad',{
 
-  //schema:{despegue:'boolean'},
-
-  canGame: function(){
-    return "getGamepads" in navigator;
-  },
+    var: hasGP=false,
+    var: despegue=false,
+    
 
   init: function(){
     var repGP;
-    var hasGP = false;
-    var despegue = false;
     
     if(canGame){
+        var prompt = "Para empezar a usar el gamepad, conéctelo y presione cualquier botón!";
+        $("#gamepadPrompt").text(prompt);
        //Se ha conectado el gamepad
         $(window).on("gamepadconnected", function(e) {
           $("#gamepadPrompt").html("Game Pad Conectado!");
@@ -44,7 +46,6 @@ AFRAME.registerComponent('pad',{
 
     //Recuperamos la entidad que ha llamado al evento
     var entity = this.el;
-
     //Comprobamos si hay acción del gamepad
     if(hasGP){
       //Adquiere el primer gamepad que encuentres

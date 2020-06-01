@@ -1,4 +1,4 @@
-AFRAME.registerComponent('pad',{
+/*AFRAME.registerComponent('pad',{
 
     schema:{
         hasGP:{type:'boolean',dafault:'false'}
@@ -24,100 +24,100 @@ AFRAME.registerComponent('pad',{
         var gp = navigator.getGamepads()[0];
         var hasGP;
         if(data.hasGP){
-            if(gp.buttons[1].pressed){
-                entity.object3D.position.x += 0.5;
+            if(gp.buttons[13].pressed){
+                entity.object3D.position.x += 0.3;
                 console.log("Derecha");
             } 
-            else if(gp.buttons[2].pressed){
-                entity.object3D.position.x -= 0.5;
+            else if(gp.buttons[15].pressed){
+                entity.object3D.position.x -= 0.3;
                 console.log("Izquierda");
             } 
-            else if(gp.buttons[3].pressed){
-                entity.object3D.position.y += 0.5;
+            else if(gp.buttons[12].pressed){
+                entity.object3D.position.y += 0.03;
                 console.log("Arriba");
             } 
-            else if(gp.buttons[4].pressed){
-                entity.object3D.position.y -= 0.5;
+            else if(gp.buttons[14].pressed){
+                entity.object3D.position.y -= 0.03;
                 console.log("Abajo");
             } 
         }
     },
-});
+});*/
 
-/*function reportOnGamepad() {
-    var gp = navigator.getGamepads()[0];
 
-    
-    if(gp.buttons[13].pressed)
-        html += "Pulsado el botón 13";
-    
-}*/
 
-/*
 var repGP;
-var hasGP = false;
+    var hasGP = false;
+    
+    function canGame() {
+        return "getGamepads" in navigator;
+    }
 
-function canGame() {
-    return "getGamepads" in navigator;
-}
+    $(document).ready(function() {
 
-$(document).ready(function() {
+        if(canGame()) {
 
-    if(canGame()) {
-
-        var prompt = "Para empezar a usar el gamepad, conéctelo y presione cualquier botón!";
-        $("#gamepadPrompt").text(prompt);
-        
-        //Evento cuando se conecta el Gamepad
-        $(window).on("gamepadconnected", function(e) {
-            hasGP = true;
-            console.log("connection event");
-            $("#gamepadPrompt").html("Gamepad conectado!");
-            startReportOnGamepad();
-        });
-
-        //Evento cuando se desconecta el Gamepad
-        $(window).on("gamepaddisconnected", function(e) {
-            console.log("disconnection event");
+            var prompt = "Para empezar a usar el gamepad, conéctelo y presione cualquier botón!";
             $("#gamepadPrompt").text(prompt);
-            endReportOnGamepad()
-        });
+            
+            $(window).on("gamepadconnected", function(e) {
+                hasGP = true;
+                console.log("connection event");
+                $("#gamepadPrompt").html("Gamepad conectado!");
+                startReportOnGamepad();
+            });
 
-        //setup an interval for Chrome
-        var checkGP = window.setInterval(function() {
-            console.log('checkGP');
-            if(navigator.getGamepads()[0]) {
-                if(!hasGP) {
-                    $(window).trigger("gamepadconnected",{gamepad:navigator.getGamepads()[0]});
+            $(window).on("gamepaddisconnected", function(e) {
+                console.log("disconnection event");
+                $("#gamepadPrompt").text(prompt);
+                endReportOnGamepad()
+            });
+
+            //setup an interval for Chrome
+            var checkGP = window.setInterval(function() {
+                console.log('checkGP');
+                if(navigator.getGamepads()[0]) {
+                    if(!hasGP) {
+                        $(window).trigger("gamepadconnected",{gamepad:navigator.getGamepads()[0]});
+                    }
+                    window.clearInterval(checkGP);
                 }
-                window.clearInterval(checkGP);
-            }
-        }, 500);
+            }, 500);
+        }
+        
+    });
+    
+    function startReportOnGamepad(){
+        repGP = window.setInterval(reportOnGamepad,100);
+    }
+    function endReportOnGamepad() {
+        window.clearInterval(repGP);
     }
     
-});
+    function reportOnGamepad() {
+        var gp = navigator.getGamepads()[0];
+        var html = "";
+            html += "<b>id:</b> "+gp.id+"<br/>";
+            html += "<b>mapping:<b> "+gp.mapping+"<br/>";
+        for(var i=0;i<gp.buttons.length;i++) {
+            html+= "<b>buttons[ "+(i)+"]:</b> ";
+            if(gp.buttons[i].pressed) html+= " pulsado";
+            html+= "<br/>";
+        }
+        
+        for(var i=0;i<gp.axes.length; i++) {
+            html+= "<b>axes["+i+"]:</b> "+gp.axes[i]+"<br/>";
+        }
+        
+        $("#gamepadDisplay").html(html);
+    }
 
-function startReportOnGamepad(){
-    repGP = window.setInterval(reportOnGamepad,100);
-}
-function endReportOnGamepad() {
-    window.clearInterval(repGP);
-}
 
-function reportOnGamepad() {
-    var gp = navigator.getGamepads()[0];
-    var html = "";
-        html += "<b>id:</b> "+gp.id+"<br/>";
-        html += "<b>mapping:<b> "+gp.mapping+"<br/>";
-    for(var i=0;i<gp.buttons.length;i++) {
-        html+= "<b>buttons[ "+(i)+"]:</b> ";
-        if(gp.buttons[i].pressed) html+= " pulsado";
-        html+= "<br/>";
-    }
-    
-    for(var i=0;i<gp.axes.length; i++) {
-        html+= "<b>axes["+i+"]:</b> "+gp.axes[i]+"<br/>";
-    }
-    
-    $("#gamepadDisplay").html(html);
-}*/
+    //Axes left/rigth -->   axes[1] --> left = 1 rigth = -1
+    //Axes up/down    -->   axes[0] --> up = -1  down = 1
+    //A -->   button[3]
+    //B -->   button[0]  
+    //C -->   button[2]
+    //D -->   button[1]
+    //S1-->   button[4]
+    //S2-->   button[5]       
