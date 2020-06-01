@@ -22,6 +22,17 @@ AFRAME.registerComponent('pad',{
         $(window).on("gamepaddisconnected", function(e) {
           hasGP = false;
         });
+
+        //setup an interval for Chrome
+        var checkGP = window.setInterval(function() {
+          console.log('checkGP');
+          if(navigator.getGamepads()[0]) {
+              if(!hasGP) {
+                  $(window).trigger("gamepadconnected",{gamepad:navigator.getGamepads()[0]});
+              }
+              window.clearInterval(checkGP);
+          }
+      }, 500);
     }
    
     
