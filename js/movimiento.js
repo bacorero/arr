@@ -42,7 +42,7 @@ tick: function(time,deltatime){
 
   //Recuperamos la entidad que ha llamado al evento
   var entity = this.el;
-  entity,object3D.position.y += deltatime/1000;
+
   //Comprobamos si hay acción del gamepad
   if(hasGP){
 
@@ -56,9 +56,9 @@ tick: function(time,deltatime){
 
     //Axis left/rigth
     if(despegue){
-        //entity.object3D.position.x += gp.axes[1] * (deltatime/1000);
-        //entity.object3D.position.z += gp.axes[0] * (deltatime/1000);
-        //entity,object3D.position.y += deltatime/1000;
+        entity.object3D.position.x += gp.axes[1] * (deltatime/1000);
+        entity.object3D.position.z += gp.axes[0] * (deltatime/1000);
+        entity.object3D.position.y += deltatime/1000;
     }
   }
   
