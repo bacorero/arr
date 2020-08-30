@@ -24,15 +24,22 @@
   </div>
 
   <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: false;" embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;">
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-  
+  <!--patrón predefinido-->
+  <a-marker preset='hiro'>
+      <a-box position='0 0 0' scale='0.5 0.5 0.5' material='color: green;'></a-box> 
+  </a-marker>
 
-  <a-nft type="nft" url="./descriptors/2" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+  <!--Desde una imagen cualquiera-->
+  <!--<a-nft type="nft" url="/arjs/descriptors/2" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
     <a-box position='0 -2 0' scale='0.5 0.5 0.5' material='color: red;'></a-box>
-  </a-nft>
+  </a-nft>-->
  
-    
+  <!--Si tengo un patrón personalizado-->
+  <a-marker type="pattern" preset="custom" url="./descriptors/pattern2.patt" >
+    <a-box position='0 0 0' scale='0.5 0.5 0.5' material='color: blue;'></a-box> 
+  </a-marker>
   
     <a-entity camera></a-entity>
   </a-scene>
