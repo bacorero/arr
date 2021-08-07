@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Location-based AR.js demo</title>
+    <title>Localizando a Josefino</title>
     <script src="js/aframe-1.0.4.min.js"></script>
     <script src="js/aframe-look-at-component.min.js"></script>
     <script src="js/aframe-ar-nft.js"></script>
@@ -16,10 +16,17 @@
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
       <a-text
-        value="Josefino"
+        value="Josefino-1"
         look-at="[gps-camera]"
         scale="50 50 50"
-        gps-entity-place="latitude: 38.346098; longitude: -0.505821;"
+        gps-entity-place="latitude: 38.346098; longitude: -0.506039;"
+      ></a-text>
+
+      <a-text
+        value="Josefino-2"
+        look-at="[gps-camera]"
+        scale="50 50 50"
+        gps-entity-place="latitude: 38.346426; longitude: -0.505821;"
       ></a-text>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
