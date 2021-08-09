@@ -1,6 +1,11 @@
 function localizacion(){
     if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(mostrarUbicacion);
+    console.log("Mostrando ubicación");
+    }
+    else{
+        console.log("Imposible mostrar ubicacion");
+    }
   }
 }
   
