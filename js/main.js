@@ -13,6 +13,6 @@ function localizacion(){
     const lng = ubicacion.coords.longitude;
     const lat = ubicacion.coords.latitude;
     console.log(`longitud: ${ lng } | latitud: ${ lat }`);
-    document.getElementById('posicion').innerHTML=`longitud: ${ lng } | latitud: ${ lat }`;
+    document.getElementById('posicion').innerHTML= 'Longitud: ' + lng + 'Latitud: ' + lat;//`longitud: ${ lng } | latitud: ${ lat }`;
   }
 
