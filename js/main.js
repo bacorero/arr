@@ -7,11 +7,12 @@ function localizacion(){
         console.log("Imposible mostrar ubicacion");
     }
   }
-}
+
   
   function mostrarUbicacion (ubicacion) {
     const lng = ubicacion.coords.longitude;
     const lat = ubicacion.coords.latitude;
     console.log(`longitud: ${ lng } | latitud: ${ lat }`);
+    document.getElementById('posicion').innerHTML=`longitud: ${ lng } | latitud: ${ lat }`;
   }
 
