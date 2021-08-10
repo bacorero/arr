@@ -10,10 +10,11 @@
     <script src="js/aframe-ar-nft.js"></script>
   </head>
 
-  <body style="margin: 0; overflow: hidden;" onload="localizacion()">
+  <body style="margin: 0; overflow: hidden;"
+  >
     <div id="posicion"></div>
     <div>
-    <!--<a-scene
+    <a-scene
       vr-mode-ui="enabled: false"
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
@@ -29,7 +30,7 @@
         value="Josefino-25"
         look-at="[gps-camera]"
         scale="25 25 25"
-        gps-entity-place="latitude: 38.346426; longitude: -0.505821;"
+        gps-entity-place="latitude: 38.3464648; longitude: -0.5060999;"
       ></a-text>
 
       <a-text
@@ -47,6 +48,6 @@
       ></a-text>
 
       <a-camera gps-camera rotation-reader> </a-camera>
-    </a-scene>-->
+    </a-scene>
   </body>
 </html>
