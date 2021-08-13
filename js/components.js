@@ -18,14 +18,17 @@ AFRAME.registerComponent('peakfinder', {
         contador += contador + deltatime;
         if(contador >= 30000){
             window.addEventListener('gps-camera-update-position', e=>{
-                alert(e.detail.position.longitude,e.detail.position.latitude);
+                this._loadPeaks(e.detail.position.longitude,e.detail.position.latitude);
                 contador = 0;
                 });
         }
         },
 
     _loadPeaks: function(longitude,latitude){
-        const scale = 2000;
+
+        alert(longitude);
+
+       /* const scale = 2000;
         fetch('https://www.hikar.org/fm/ws/bsvr.php?bbox=${longitude-0.1},${latitude-0.1},${longitude+0.1},${latitude+0.1}&outProj=4326&format=json&poi=natural')
         .then ( response => response.json())
         .then (json => {
@@ -46,6 +49,6 @@ AFRAME.registerComponent('peakfinder', {
                     this.el.appendChild(entity);
                     console.log(peak.properties.name)
                 });
-        });
+        });*/
     }
-});
+})
