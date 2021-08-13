@@ -19,7 +19,7 @@ AFRAME.registerComponent('peakfinder', {
         if(counter >= 5000){
             counter = 0;
         }
-        console.log(this.counter);
+        console.log(counter);
         
         },
 
