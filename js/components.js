@@ -1,6 +1,6 @@
 AFRAME.registerComponent('peakfinder', {
 
-    var: counter,
+    var: counter=0,
 
     init: function(){
         this.loaded = false;
