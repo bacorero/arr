@@ -1,4 +1,4 @@
-cancelAnimationFrame.registerComponent('peakfinder', {
+AFRAME.registerComponent('peakfinder', {
 
     init: function(){
         this.loaded = false;
