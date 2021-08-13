@@ -17,11 +17,11 @@ AFRAME.registerComponent('peakfinder', {
 
         contador += contador + deltatime;
         if(contador >= 30000){
-            alert("Desbordamiento de tiempo");
-            contador = 0;
+            window.addEventListener('gps-camera-update-position', e=>{
+                alert(e.detail.position.longitude,e.detail.position.latitude);
+                contador = 0;
+                }
         }
-        console.log(contador);
-        
         },
 
     _loadPeaks: function(longitude,latitude){
