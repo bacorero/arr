@@ -1,9 +1,10 @@
 AFRAME.registerComponent('peakfinder', {
 
+    var: counter,
 
     init: function(){
         this.loaded = false;
-        this.counter = 0;
+        counter = 0;
         window.addEventListener('gps-camera-update-position', e=>{
             if(this.loaded === false){
                 this._loadPeaks(e.detail.position.longitude,e.detail.position.latitude);
@@ -14,7 +15,7 @@ AFRAME.registerComponent('peakfinder', {
 
     tick: function(time,deltatime){
 
-        this.counter += this.counter + deltatime;
+        counter += counter + deltatime;
         console.log(this.counter);
         
         },
