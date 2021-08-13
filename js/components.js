@@ -14,8 +14,8 @@ AFRAME.registerComponent('peakfinder', {
 
     tick: function(time,deltatime){
 
-        this.counter += this.coumter + deltatime;
-        console.log(this.conunter);
+        this.counter += this.counter + deltatime;
+        console.log(this.counter);
         
         },
 
