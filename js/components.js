@@ -36,6 +36,7 @@ AFRAME.registerComponent('peakfinder', {
                         longitude: peak.geometry.coordinates[0]
                     });
                     this.el.appendChild(entity);
+                    console.log(peak.properties.name)
                 });
         });
     }
