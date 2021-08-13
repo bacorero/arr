@@ -1,6 +1,6 @@
 AFRAME.registerComponent('peakfinder', {
 
-    var: counter=0,
+    var: contador = 0,
 
     init: function(){
         this.loaded = false;
@@ -15,11 +15,11 @@ AFRAME.registerComponent('peakfinder', {
 
     tick: function(time,deltatime){
 
-        counter += counter + deltatime;
-        //if(counter >= 5000){
-        //    counter = 0;
-        //}
-        console.log(counter);
+        contador += contador + deltatime;
+        if(contador >= 5000){
+            contador = 0;
+        }
+        console.log(contador);
         
         },
 
