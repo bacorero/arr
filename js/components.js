@@ -16,7 +16,8 @@ AFRAME.registerComponent('peakfinder', {
     tick: function(time,deltatime){
 
         contador += contador + deltatime;
-        if(contador >= 5000){
+        if(contador >= 30000){
+            alert("Desbordamiento de tiempo");
             contador = 0;
         }
         console.log(contador);
