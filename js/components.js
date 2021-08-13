@@ -20,7 +20,7 @@ AFRAME.registerComponent('peakfinder', {
             window.addEventListener('gps-camera-update-position', e=>{
                 alert(e.detail.position.longitude,e.detail.position.latitude);
                 contador = 0;
-                }
+                });
         }
         },
 
