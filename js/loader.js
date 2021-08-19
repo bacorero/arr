@@ -23,7 +23,7 @@ function renderPlaces(places){
 
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
-        let model = document.createElement(place.name);     //Creamos el objeto
+        let model = document.createElement('a-sphere');     //Creamos el objeto
         let color = place.color;                            //Color del objeto
         model.setAttribute('color',color);
         console.log(place.color);
