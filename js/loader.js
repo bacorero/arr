@@ -22,7 +22,7 @@ function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
 
     //Recorremos los objetos para renderizarlos
-    places.foreach((place)=>{
+    places.forEach((place)=>{
         let model = document.createElement(place.name);     //Creamos el objeto
         let color = place.color;                            //Color del objeto
         model.setAttribute('color',color);
