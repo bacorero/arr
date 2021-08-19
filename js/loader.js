@@ -29,6 +29,8 @@ function renderPlaces(places){
         console.log(place.color);
         console.log(place.name);
 
+        scene.appendChild(model);
+
         //model.setAttribute('gps-entity-place');
     })
 }
