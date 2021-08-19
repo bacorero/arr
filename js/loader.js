@@ -26,6 +26,7 @@ function renderPlaces(places){
         let model = document.createElement(place.name);     //Creamos el objeto
         let color = place.color;                            //Color del objeto
         model.setAttribute('color',color);
+        console.log("Renderizado cubo amarillo");
 
         //model.setAttribute('gps-entity-place');
     })
