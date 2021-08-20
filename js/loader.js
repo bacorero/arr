@@ -37,7 +37,7 @@ function renderPlaces(places){
     places.forEach(place =>{
         let model = document.createElement(place.name);     //Creamos el objeto
         let color = place.color;          
-        model.setAttribute(gps-projected-entity-place,'latitude:${latitude}; longitude:${longitude');                  
+        model.setAttribute('gps-projected-entity-place','latitude:${latitude}; longitude:${longitude');                  
         model.setAttribute('material','color:${color}');
         model.setAttribute('scale','2 2 2');
         console.log(place.color);
