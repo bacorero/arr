@@ -40,11 +40,10 @@ function renderPlaces(places){
         model.setAttribute('gps-projected-entity-place',{latitude:place.latitude, longitude:place.longitude});                  
         model.setAttribute('material',{color:color});
         model.setAttribute('scale','2 2 2');
-        console.log(place.color);
-        console.log(place.name);
 
+        console.log("latitude: " + place.latitude);
+       
         scene.appendChild(model);
 
-        //model.setAttribute('gps-entity-place');
     })
 }
