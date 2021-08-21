@@ -9,7 +9,7 @@ window.onload = () => {
 function staticLoadPlaces(){
     return[
         {
-            name:'a-box',
+            name:'a-sphere',
             color:'blue',
             latitude:'38.346771',
             longitude:'-0.506523'
