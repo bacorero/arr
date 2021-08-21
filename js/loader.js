@@ -10,7 +10,7 @@ function staticLoadPlaces(){
     return[
         {
             name:'a-box',
-            color:'yelow',
+            color:'blue',
             latitude:'38.346771',
             longitude:'-0.506523'
         },
@@ -36,9 +36,9 @@ function renderPlaces(places){
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
         let model = document.createElement(place.name);     //Creamos el objeto
-        let color = place.color;          
-        model.setAttribute('gps-projected-entity-place',{latitude:place.latitude, longitude:place.longitude});                  
-        model.setAttribute('material',{color:color});
+
+        model.setAttribute('gps-projected-entity-place',{latitude: place.latitude, longitude: place.longitude});                  
+        model.setAttribute('material',{color: place.color});
         model.setAttribute('scale','2 2 2');
 
         console.log("latitude: " + place.latitude);
