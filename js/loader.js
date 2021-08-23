@@ -47,8 +47,6 @@ function renderPlaces(places){
         //model.setAttribute("gps-projected-entity-place",posicion);                  
         //model.setAttribute('material',{color: place.color});
         //model.setAttribute('scale','2 2 2');
-
-        console.log("posicion: " + posicion);
        
         scene.appendChild(model);
         
