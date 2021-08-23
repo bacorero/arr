@@ -20,12 +20,12 @@ function staticLoadPlaces(){
             latitude:'38.346000',
             longitude:'-0.506265'
         },
-        /*{
+        {
             name:'a-box',
             color:'green',
             latitude:'38.346464',
             longitude:'-0.506308'
-        },*/
+        },
     ];
 }
 
@@ -42,7 +42,8 @@ function renderPlaces(places){
     places.forEach(place =>{
         let model = document.createElement(place.name);     //Creamos el objeto
         
-        //posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
+        posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
+        model.setAttribute.material = "color:blue";
         //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
         //model.setAttribute("gps-projected-entity-place",posicion);                  
         //model.setAttribute('material',{color: place.color});
