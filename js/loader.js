@@ -32,13 +32,14 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
+    let parrafo = document.createElement('<p>');
+    parrafo.setAttribute('hola', 'adios');
+    scene.appendChild(parrafo);
 
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
         let model = document.createElement(place.name);     //Creamos el objeto
-        let parrafo = document.createElement('<p>');
-
-        parrafo.setAttribute('hola', 'adios')
+        
         //posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
         //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
         //model.setAttribute("gps-projected-entity-place",posicion);                  
@@ -48,7 +49,7 @@ function renderPlaces(places){
         console.log("posicion: " + posicion);
        
         scene.appendChild(model);
-        scene.appendChild(parrafo);
+        
 
     })
 }
