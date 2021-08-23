@@ -32,6 +32,7 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
+    console.log("La escena: " + scene);
 
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
