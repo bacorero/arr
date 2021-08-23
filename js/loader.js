@@ -32,9 +32,10 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
-    var parrafo = document.createElement("<p>");
-    parrafo.setAttribute('hola', 'adios');
-    scene.appendChild(parrafo);
+
+    let parrafo = document.createElement("<p>");
+    var contenido = document.createTextNode("Hola!¿Qué tal?");
+    parrafo.appendChild(contenido);
 
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
