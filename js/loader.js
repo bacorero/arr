@@ -33,7 +33,7 @@ function staticLoadPlaces(){
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
 
-    let parrafo = document.createElement("<p>");
+    let parrafo = document.createElement("p");
     var contenido = document.createTextNode("Hola!¿Qué tal?");
     parrafo.appendChild(contenido);
     scene.appendChild(parrafo);
