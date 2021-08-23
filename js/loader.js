@@ -36,8 +36,10 @@ function renderPlaces(places){
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
         let model = document.createElement(place.name);     //Creamos el objeto
+        let parrafo = document.createElement('<p>');
 
-        posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
+        parrafo.setAttribute('hola', 'adios')
+        //posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
         //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
         //model.setAttribute("gps-projected-entity-place",posicion);                  
         //model.setAttribute('material',{color: place.color});
