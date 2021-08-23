@@ -43,7 +43,7 @@ function renderPlaces(places){
         let model = document.createElement(place.name);     //Creamos el objeto
         
         posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
-        model.setAttribute.material = "color:blue";
+        //model.setAttribute.material = "color:blue";
         //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
         //model.setAttribute("gps-projected-entity-place",posicion);                  
         //model.setAttribute('material',{color: place.color});
