@@ -32,7 +32,7 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
-    let parrafo = document.createElement('<p>');
+    var parrafo = document.createElement("<p>");
     parrafo.setAttribute('hola', 'adios');
     scene.appendChild(parrafo);
 
