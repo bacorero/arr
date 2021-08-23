@@ -20,12 +20,12 @@ function staticLoadPlaces(){
             latitude:'38.346000',
             longitude:'-0.506265'
         },
-        {
+        /*{
             name:'a-box',
             color:'green',
             latitude:'38.346464',
             longitude:'-0.506308'
-        },
+        },*/
     ];
 }
 
@@ -43,7 +43,7 @@ function renderPlaces(places){
         model.setAttribute('material',{color: place.color});
         model.setAttribute('scale','2 2 2');
 
-        console.log("posicion: " + place.latitude);
+        console.log("posicion: " + posicion);
        
         scene.appendChild(model);
 
