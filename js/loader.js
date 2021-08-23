@@ -37,11 +37,13 @@ function renderPlaces(places){
     places.forEach(place =>{
         let model = document.createElement(place.name);     //Creamos el objeto
 
-        model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});                  
+        posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
+        //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
+        model.setAttribute("gps-projected-entity-place",posicion);                  
         model.setAttribute('material',{color: place.color});
         model.setAttribute('scale','2 2 2');
 
-        console.log("latitude: " + place.latitude);
+        console.log("posicion: " + place.latitude);
        
         scene.appendChild(model);
 
