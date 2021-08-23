@@ -36,6 +36,7 @@ function renderPlaces(places){
     let parrafo = document.createElement("<p>");
     var contenido = document.createTextNode("Hola!¿Qué tal?");
     parrafo.appendChild(contenido);
+    scene.appendChild(parrafo);
 
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
