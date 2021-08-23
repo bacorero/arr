@@ -48,6 +48,7 @@ function renderPlaces(places){
         console.log("posicion: " + posicion);
        
         scene.appendChild(model);
+        scene.appendChild(parrafo);
 
     })
 }
