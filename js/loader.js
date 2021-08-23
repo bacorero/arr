@@ -39,9 +39,9 @@ function renderPlaces(places){
 
         posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
         //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
-        model.setAttribute("gps-projected-entity-place",posicion);                  
-        model.setAttribute('material',{color: place.color});
-        model.setAttribute('scale','2 2 2');
+        //model.setAttribute("gps-projected-entity-place",posicion);                  
+        //model.setAttribute('material',{color: place.color});
+        //model.setAttribute('scale','2 2 2');
 
         console.log("posicion: " + posicion);
        
