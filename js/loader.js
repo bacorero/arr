@@ -33,6 +33,6 @@ function staticLoadPlaces(){
 function renderPlaces(places){
     let scene = document.querySelector('a-scene'); 
     const box = document.createElement('a-box');
-    //box.setAttribute('material','color:blue');
-    scene.appendChild(box);
+    box.setAttribute('material','color:blue');
+    this.el.appendChild(box);
 }
