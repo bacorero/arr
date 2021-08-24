@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>AR 2</title>
+        <title>AR 5</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <!-- Look-at component. We don't need this now, but we will later. -->
@@ -13,11 +13,11 @@
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
             <a-camera gps-projected-camera rotation-reader></a-camera>
-            <a-entity
-                position="0 0 0"
+            <!--<a-entity
+                gps-projected-entity-place='latitude: 38.346771; longitude: -0.506523'
                 scale="0.05 0.05 0.05"
                 gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-entity>
+        ></a-entity>-->
         </a-scene>
     </body>
 </html>
