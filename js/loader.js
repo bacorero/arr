@@ -32,5 +32,6 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
-    scene.innerHTML = "<a-box gps-projected-entity-place='latitude: 38.346000; longitude: -0.506265' material='color: red' scale='2 2 2'></a-box>"
+    var content = document.getElementById('contenido');
+    content.innerHTML = "<a-box gps-projected-entity-place='latitude: 38.346000; longitude: -0.506265' material='color: red' scale='2 2 2'></a-box>"
 }
