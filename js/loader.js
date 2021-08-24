@@ -1,6 +1,6 @@
 window.onload = () => {
 
-    //let places = staticLoadPlaces();            //Cargamos los objetos
+    let places = staticLoadPlaces();            //Cargamos los objetos
 
     renderPlaces(places);                       //Los renderizamos
 };
