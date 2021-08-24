@@ -32,7 +32,14 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
-    console.log("La escena: " + scene);
+    scene.innerHTML = `<a-box gps-projected-entity-place='latitude: 38.346000; longitude: -0.506265' material='color: red' scale='2 2 2'></a-box>' 
+        
+
+    }
+
+
+/* 
+console.log("La escena: " + scene);
 
     //Recorremos los objetos para renderizarlos
     places.forEach(place =>{
@@ -45,8 +52,4 @@ function renderPlaces(places){
         //model.setAttribute('material',{color: place.color});
         //model.setAttribute('scale','2 2 2');
        
-        scene.appendChild(model);
-        
-
-    })
-}
+        scene.appendChild(model);*/
