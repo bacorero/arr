@@ -1,6 +1,6 @@
 window.onload = () => {
 
-    let places = staticLoadPlaces();            //Cargamos los objetos
+    //let places = staticLoadPlaces();            //Cargamos los objetos
 
     renderPlaces(places);                       //Los renderizamos
 };
@@ -31,7 +31,9 @@ function staticLoadPlaces(){
 
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
-    let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
+    //let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
     const content = document.getElementById('contenido');
     content.innerHTML = `<a-box gps-projected-entity-place='latitude: 38.346000; longitude: -0.506265' material='color: red' scale='2 2 2'></a-box>`
+    content.innerHTML +=`<a-box gps-projected-entity-place='latitude: 38.346771; longitude: -0.506523' material='color: blue' scale='8 8 8'></a-box>`
+    content.innerHTML +=`<a-box gps-projected-entity-place='latitude: 38.346464; longitude: -0.506308' material='color: green' scale='2 2 2'></a-box>`
 }
