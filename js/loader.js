@@ -32,24 +32,5 @@ function staticLoadPlaces(){
 //Funcion que renderiza los objetos precargados
 function renderPlaces(places){
     let scene = document.querySelector('a-scene');          //Apuntamos al tag 'a-scene'
-    scene.innerHTML = `<a-box gps-projected-entity-place='latitude: 38.346000; longitude: -0.506265' material='color: red' scale='2 2 2'></a-box>' 
-        
-
-    }
-
-
-/* 
-console.log("La escena: " + scene);
-
-    //Recorremos los objetos para renderizarlos
-    places.forEach(place =>{
-        let model = document.createElement(place.name);     //Creamos el objeto
-        
-        posicion = "latitude:" + place.latitude + "; longitude:" + place.longitude;
-        //model.setAttribute.material = "color:blue";
-        //model.setAttribute("gps-projected-entity-place",{latitude: place.latitude, longitude: place.longitude});  
-        //model.setAttribute("gps-projected-entity-place",posicion);                  
-        //model.setAttribute('material',{color: place.color});
-        //model.setAttribute('scale','2 2 2');
-       
-        scene.appendChild(model);*/
+    scene.innerHTML = "<a-box gps-projected-entity-place='latitude: 38.346000; longitude: -0.506265' material='color: red' scale='2 2 2'></a-box>"
+}
