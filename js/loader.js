@@ -2,7 +2,7 @@ window.onload = () => {
 
     let places = staticLoadPlaces();            //Cargamos los objetos
 
-    renderPlaces(places);                       //Los renderizamos
+    //renderPlaces(places);                       //Los renderizamos
 };
 
 //Esta funcion devuelve los objetos predeterminados
