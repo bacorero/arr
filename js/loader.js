@@ -3,7 +3,7 @@ window.onload = ()=> {
     const entity = document.createElement('entity');
     entity.setAttribute('gps-projected-entity-place','latitude: 38.346464; longitude: -0.506308');
     entity.setAttribute('gltf-model','./assets/scene.gltf');
-    entity.setAttribute('scale','1 1 1');
+    entity.setAttribute('scale','3 3 3');
     
     scene.appendChild(entity);
 }
