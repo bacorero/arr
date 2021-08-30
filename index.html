@@ -1,21 +1,20 @@
 <html>
     <head>
-        <title>AR 8</title>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+        <title>AR.js Basic Projected Camera Example</title>
+        <script src="./js/1_2_0_aframe.min.js"></script>
+        <script src="./js/aframe-ar-nft.js"></script>
         <!-- Look-at component. We don't need this now, but we will later. -->
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        
+        <script src="./js/aframe-look-at-component.min.js"></script>
+        <script src="./js/loader.js"></script>
     </head>
+
     <body>
-    <a-scene
+    <a-scene sceneel
         vr-mode-ui="enabled: false"
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
             <a-camera gps-projected-camera rotation-reader></a-camera>
-            <a-box gps-projected-entity-place='latitude: 38.346771; longitude: -0.506523' material='color: red' scale='5 5 5'></a-box>
+            <a-box gps-projected-entity-place='latitude: 38.346401; longitude: -0.506278' material='color: red' scale='10 10 10'></a-box>
         </a-scene>
-        <script src="js/loader.js"></script>
     </body>
 </html>
-
