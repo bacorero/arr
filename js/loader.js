@@ -11,11 +11,13 @@ AFRAME.registerComponent('sceneel',{
                 cilindro.setAttribute('gps-projected-entity-place',{latitude:38.346390,longitude:-0.506200});
                 cilindro.setAttribute('material','color','blue');
                 cilindro.setAttribute('look-at','[gps-projected-camera]');
+                cilindro.setAttribute('height','3');
+                cilindro.setAttribute('radius','3');
 
                 //esfera.setAttribute('depth','5');
                 //esfera.setAttribute('height','5');
                 //esfera.setAttribute('width','5');
-                
+
                 scena.appendChild(esfera);
                 scena.appendChild(cilindro);
         }
