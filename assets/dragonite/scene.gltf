@@ -20486,7 +20486,7 @@
       "type": "SCALAR"
     },
     {
-      "bufferView": 8,
+`     "bufferView": 8,
       "byteOffset": 147840,
       "componentType": 5126,
       "count": 38,
