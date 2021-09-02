@@ -16,7 +16,7 @@ AFRAME.registerComponent('sceneel',{
                 cilindro.setAttribute('geometry','radius','3');
 
                 texto.setAttribute('value','Hola,JM!!');
-                texto.setAttribute('text','color','green');
+                //texto.setAttribute('text','color','green');
                 texto.setAttribute('gps-projected-entity-place',{latitude:38.345556,longitude:-0.505388});
 
                 //esfera.setAttribute('depth','5');
